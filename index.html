@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="viewport" content="width=540, user-scalable=0" />
+        <meta name="apple-mobile-web-app-title" content="NAVER" />
+        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Pragma" content="no-cache" />
+
+        <title>TO DO LIST</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <h1>TO DO LIST</h1>
+        <div class="wrapper">
+            <div class="writeBox">
+                <input type="text" name="write" id="write" placeholder="여기에 내용을 작성해주세요." />
+                <i class="fas fa-plus" id="plus"></i>
+            </div>
+
+            <i class="far fa-trash-alt" id="deleteBtn"></i>
+            <span class="selbtnText txt1">선택삭제</span>
+            <i class="fas fa-check-circle" id="selDoneBtn"></i>
+            <span class="selbtnText txt2">선택완료</span>
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>
+                            <input type="checkbox" value="전체선택" id="selectAll" name="selectAll" />
+                        </td>
+                        <td>내용</td>
+                        <td>삭제</td>
+                    </tr>
+                </thead>
+                <tbody id="list_item"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">나만의 List를 작성해 보세요</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <table id="doneTable">
+                <thead>
+                    <tr class="doneBox">
+                        <td colspan="3">완료</td>
+                    </tr>
+                </thead>
+                <tbody id="done_list_item"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">완료 되었습니다~🙌</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+
+    <script src="js/main.js"></script>
+    <script src="js/clickEvent.js"></script>
+</html>
