@@ -45,7 +45,6 @@ function addList() {
 //createElement 사용하기
 function createList(text, listName) {
     let tr = document.createElement("tr");
-    let td = document.createElement("td");
     let input = document.createElement("input");
     let icon = document.createElement("i");
     let span = document.createElement("span");
@@ -53,8 +52,8 @@ function createList(text, listName) {
 
     listName.append(tr);
     for (let i = 0; i < 3; i++) {
-        let tdClone = td.cloneNode(false);
-        tr.append(tdClone);
+        let td = document.createElement("td");
+        tr.append(td);
     }
 
     let trItem = tr.querySelectorAll("td");
