@@ -44,6 +44,6 @@ swithBtn.addEventListener("click", e => {
     } else {
         e.target.classList.add("off");
         swithBg.style.background = "#999";
-        darkMode();
     }
+    darkMode();
 });

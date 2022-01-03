@@ -307,10 +307,10 @@ td.dark {
     background: #000;
     color: #fff;
 }
-thead td.dark {
+thead tr td.dark {
     background: #333;
 }
-tfoot td.dark {
+tfoot tr td.dark {
     background: #111;
 }
 /* dark mode-E */
