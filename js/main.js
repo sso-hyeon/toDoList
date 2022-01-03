@@ -204,3 +204,25 @@ function selDelete() {
 }
 
 console.log("%c TO DO LIST", `color: white; font-size: 20px; font-family: 'Noto Sans KR', sans-serif;`);
+
+// dark mode
+function darkMode() {
+    document.querySelector("body").classList.add("dark");
+    document.querySelector("h1").classList.add("dark");
+    document.querySelectorAll(".select-section div span").forEach(ele => {
+        ele.classList.add("dark");
+    });
+    write.classList.add("dark");
+    document.querySelectorAll("table").forEach(ele => {
+        ele.classList.add("dark");
+    });
+    document.querySelectorAll("td").forEach(ele => {
+        ele.classList.add("dark");
+    });
+    document.querySelectorAll("thead td").forEach(ele => {
+        ele.classList.add("dark");
+    });
+    document.querySelectorAll("tfoot td").forEach(ele => {
+        ele.classList.add("dark");
+    });
+}

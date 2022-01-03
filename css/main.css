@@ -1,3 +1,4 @@
+/* common */
 @font-face {
     font-family: "UhBeeHanHUEY";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeHanHUEY.woff") format("woff");
@@ -26,6 +27,11 @@ h1 {
     margin: 0 auto;
     position: relative;
 }
+
+.d-none {
+    display: none !important;
+}
+/* common-E */
 
 .writeBox {
     margin: 50px auto 0;
@@ -70,6 +76,7 @@ table {
     text-align: center;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    overflow: hidden;
 }
 
 thead {
@@ -115,7 +122,6 @@ input[type="checkbox"] {
     width: 15px;
     height: 15px;
 }
-
 .delete {
     border: none;
     font-size: 20px;
@@ -125,38 +131,47 @@ input[type="checkbox"] {
     width: 100%;
     text-align: center;
     line-height: 45px;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 .delete:hover {
     transform: rotateZ(90deg);
     color: red;
 }
 
-#deleteBtn {
-    color: #999;
-    margin: 25px 15px 0 30px;
-    border: 0;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    transition: 0.2s ease-in-out;
+/* select-section */
+.select-section {
+    display: flex;
+    margin-top: 25px;
+    padding-left: 25px;
+    align-items: center;
 }
+
+.select-section div {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.select-section div i {
+    width: 100%;
+    color: #999;
+    font-size: 30px;
+    border: 0;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.select-section div span {
+    font-size: 14px;
+}
+
 #deleteBtn:hover {
     color: red;
     transform: scale(1.2);
-}
-
-#selDoneBtn {
-    color: #999;
-    border: 0;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    transition: 0.2s ease-in-out;
 }
 
 #selDoneBtn:hover {
@@ -164,15 +179,31 @@ input[type="checkbox"] {
     transform: scale(1.2);
 }
 
-.selbtnText {
-    position: absolute;
-    font-size: 14px;
-    top: 120px;
-    left: 27px;
+.switch {
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+    background-color: yellowgreen;
 }
-.txt2 {
-    left: 102px;
+
+.switch-btn {
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 100%;
+    align-self: flex-start;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+.switch-btn.off {
+    align-self: flex-end;
+}
+
+/* select-section-E */
 
 .doneList {
     text-decoration: line-through;
@@ -254,62 +285,32 @@ input[type="checkbox"] {
     /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); */
 }
 
-.d-none {
-    display: none !important;
+/* dark mode */
+body.dark {
+    background: #000;
 }
-
-.popUpWrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+h1.dark {
+    color: #fff;
 }
-
-.popUp {
-    background-color: #fff;
-    width: 300px;
-    height: 200px;
-    margin: 30vh auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+.select-section div span.dark {
+    color: #fff;
 }
-
-.pwText {
-    display: block;
-    width: 100%;
-    padding: 50px 0 30px;
-    text-align: center;
-    font-size: 20px;
+#write.dark {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: #000;
+    color: #fff;
 }
-
-#password {
-    outline: none;
-    border: none;
-    background-color: whitesmoke;
-    box-sizing: border-box;
-    height: 40px;
-    margin-left: 50px;
-    vertical-align: top;
-    text-indent: 15px;
+table.dark {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
-.okBtn {
-    outline: none;
-    width: 45px;
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 40px;
-    color: royalblue;
-    vertical-align: top;
-    padding: 0;
-    cursor: pointer;
-    transition: 0.1s ease-in-out;
+td.dark {
+    background: #000;
+    color: #fff;
 }
-.okBtn:hover {
-    transform: rotateZ(15deg);
-    font-size: 25px;
+thead td.dark {
+    background: #333;
 }
+tfoot td.dark {
+    background: #111;
+}
+/* dark mode-E */

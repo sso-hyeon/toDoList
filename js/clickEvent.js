@@ -1,4 +1,6 @@
 "use strict";
+const swithBg = document.querySelector(".switch");
+const swithBtn = document.querySelector(".switch-btn");
 
 // clickEvent
 var clickEvent = (function () {
@@ -32,5 +34,16 @@ document.addEventListener("keyup", function (e) {
     }
     if (window.event.keyCode === 27) {
         if (e.target.classList.contains("editBox")) hideEditBox(e.target.nextSibling);
+    }
+});
+
+swithBtn.addEventListener("click", e => {
+    if (e.target.matches(".off")) {
+        e.target.classList.remove("off");
+        swithBg.style.background = "yellowgreen";
+    } else {
+        e.target.classList.add("off");
+        swithBg.style.background = "#999";
+        darkMode();
     }
 });
