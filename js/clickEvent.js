@@ -38,12 +38,11 @@ document.addEventListener("keyup", function (e) {
 });
 
 swithBtn.addEventListener("click", e => {
+    e.target.classList.toggle("off");
     if (e.target.matches(".off")) {
-        e.target.classList.remove("off");
-        swithBg.style.background = "yellowgreen";
-    } else {
-        e.target.classList.add("off");
         swithBg.style.background = "#999";
+    } else {
+        swithBg.style.background = "yellowgreen";
     }
     darkMode();
 });
