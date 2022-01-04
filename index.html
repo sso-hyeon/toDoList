@@ -26,36 +26,39 @@
     </head>
 
     <body>
-        <h1>TO DO LIST</h1>
         <div class="wrapper">
-            <div class="writeBox">
+            <h1>TO DO LIST</h1>
+            <div class="write-wrap">
                 <input type="text" name="write" id="write" placeholder="여기에 내용을 작성해주세요." />
-                <i class="fas fa-plus" id="plus"></i>
+                <i class="fas fa-plus" id="enter-button"></i>
             </div>
             <section class="select-section">
                 <div>
-                    <i class="far fa-trash-alt" id="deleteBtn"></i>
-                    <span class="selbtnText txt1">선택삭제</span>
+                    <i class="far fa-trash-alt" id="select-delete-button"></i>
+                    <span>선택삭제</span>
                 </div>
                 <div>
-                    <i class="fas fa-check-circle" id="selDoneBtn"></i>
-                    <span class="selbtnText txt2">선택완료</span>
+                    <i class="fas fa-check-circle" id="select-done-button"></i>
+                    <span>선택완료</span>
                 </div>
-                <div class="switch">
-                    <button class="switch-btn"></button>
+                <div>
+                    <div class="switch">
+                        <button class="switch-btn"></button>
+                    </div>
+                    <span>Dark Mode</span>
                 </div>
             </section>
-            <table id="table">
+            <table id="list-wrap">
                 <thead>
                     <tr>
                         <td>
-                            <input type="checkbox" value="전체선택" id="selectAll" name="selectAll" />
+                            <input type="checkbox" value="전체선택" id="select-all-button" name="selectAll" />
                         </td>
                         <td>내용</td>
                         <td>삭제</td>
                     </tr>
                 </thead>
-                <tbody id="list_item"></tbody>
+                <tbody id="list-item"></tbody>
                 <tfoot>
                     <tr>
                         <td colspan="3">나만의 List를 작성해 보세요</td>
@@ -63,13 +66,13 @@
                 </tfoot>
             </table>
 
-            <table id="doneTable">
+            <table id="done-list-wrap">
                 <thead>
-                    <tr class="doneBox">
+                    <tr>
                         <td colspan="3">완료</td>
                     </tr>
                 </thead>
-                <tbody id="done_list_item"></tbody>
+                <tbody id="done-list-item"></tbody>
                 <tfoot>
                     <tr>
                         <td colspan="3">완료 되었습니다~🙌</td>

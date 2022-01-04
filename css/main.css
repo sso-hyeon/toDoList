@@ -33,7 +33,8 @@ h1 {
 }
 /* common-E */
 
-.writeBox {
+/* write-wrap */
+.write-wrap {
     margin: 50px auto 0;
     width: 500px;
     text-align: center;
@@ -54,7 +55,7 @@ h1 {
     font-size: 16px;
 }
 
-#plus {
+#enter-button {
     font-size: 25px;
     color: yellowgreen;
     cursor: pointer;
@@ -65,10 +66,12 @@ h1 {
     transition: 0.3s ease-in-out;
 }
 
-#plus:hover {
+#enter-button:hover {
     transform: rotateZ(90deg);
 }
+/* write-wrap-E */
 
+/* tabel Common Style */
 table {
     width: 500px;
     border-collapse: collapse;
@@ -115,6 +118,7 @@ tbody td:nth-child(2) {
 tbody tr {
     background-color: #fff;
 }
+/* tabel Common Style-E */
 
 input[type="checkbox"] {
     vertical-align: middle;
@@ -142,7 +146,7 @@ input[type="checkbox"] {
 .select-section {
     display: flex;
     margin-top: 25px;
-    padding-left: 25px;
+    padding: 0 25px;
     align-items: center;
 }
 
@@ -152,7 +156,10 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    margin-right: 20px;
+}
+.select-section div:nth-child(3) {
+    width: 100px;
+    margin-left: 260px;
 }
 
 .select-section div i {
@@ -169,17 +176,19 @@ input[type="checkbox"] {
     font-size: 14px;
 }
 
-#deleteBtn:hover {
+#select-delete-button:hover {
     color: red;
     transform: scale(1.2);
 }
 
-#selDoneBtn:hover {
+#select-done-button:hover {
     color: royalblue;
     transform: scale(1.2);
 }
 
-.switch {
+div .switch {
+    margin: 10px 0;
+    text-align: center;
     border-radius: 15px;
     width: 60px;
     height: 30px;
@@ -201,18 +210,14 @@ input[type="checkbox"] {
     align-self: flex-start;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out;
 }
 
 .switch-btn.off {
-    align-self: flex-end;
+    /* align-self: flex-end; */
+    transform: translateX(100%);
 }
-
 /* select-section-E */
-
-.doneList {
-    text-decoration: line-through;
-    color: #999;
-}
 
 .text {
     position: absolute;
@@ -246,7 +251,7 @@ input[type="checkbox"] {
     transition: 0.3s ease-in-out;
 }
 
-.done {
+.status-icon {
     position: absolute;
     top: 0;
     left: 5px;
@@ -258,21 +263,27 @@ input[type="checkbox"] {
     text-align: center;
 }
 
-.done:hover,
-.doneColor {
+#done-list-item {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+/* status done */
+.status-icon:hover,
+.icon-done {
     color: royalblue;
     transition: 0.3s ease-in-out;
 }
 
-.bgColor {
+.bg-done {
     background-color: #eee;
 }
 
-#done_list_item {
-    /* border-top: 1px solid #999; */
-    font-weight: bold;
-    background-color: #eee;
+.list-done {
+    text-decoration: line-through;
+    color: #999;
 }
+/* status done-E */
 
 .editBox {
     position: absolute;
@@ -286,17 +297,11 @@ input[type="checkbox"] {
     outline: none;
     text-indent: 10px;
     color: royalblue;
-    /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); */
 }
 
 /* dark mode */
 body.dark {
     background: #000;
-}
-h1.dark {
-    color: #fff;
-}
-.select-section div span.dark {
     color: #fff;
 }
 #write.dark {
