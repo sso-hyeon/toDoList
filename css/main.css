@@ -213,7 +213,7 @@ div .switch {
     transition: transform 0.1s ease-in-out;
 }
 
-.switch-btn.off {
+.switch.off .switch-btn {
     transform: translateX(100%);
 }
 /* select-section-E */

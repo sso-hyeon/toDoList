@@ -8,7 +8,7 @@ let cb; //체크박스
 let darkMode = false;
 
 window.addEventListener("load", function () {
-    if (localStorage.getItem("dark-mode") === "dark") swithBtn.click();
+    if (localStorage.getItem("dark-mode") === "dark") switchBtn.click();
     loadList();
 });
 
@@ -208,6 +208,15 @@ console.log("%c TO DO LIST", `color: white; font-size: 20px; font-family: 'Noto 
 
 // dark mode
 function changeDarkMode() {
+    darkMode = true;
+    this.classList.toggle("off");
+
+    if (this.matches(".off")) {
+        localStorage.setItem("dark-mode", "dark");
+    } else {
+        localStorage.setItem("dark-mode", "light");
+    }
+
     document.querySelector("body").classList.toggle("dark");
     write.classList.toggle("dark");
     document.querySelectorAll("table").forEach(ele => {

@@ -2,8 +2,7 @@
 const enterBtn = document.querySelector("#enter-button");
 const selectDeleteBtn = document.querySelector("#select-delete-button");
 const selectDoneBtn = document.querySelector("#select-done-button");
-const swithBg = document.querySelector(".switch");
-const swithBtn = document.querySelector(".switch-btn");
+const switchBtn = document.querySelector(".switch");
 
 // clickEvent
 var clickEvent = (function () {
@@ -40,14 +39,4 @@ document.addEventListener("keyup", function (e) {
     }
 });
 
-swithBtn.addEventListener("click", e => {
-    darkMode = true;
-    e.target.classList.toggle("off");
-    e.target.parentElement.classList.toggle("off");
-    if (e.target.matches(".off")) {
-        localStorage.setItem("dark-mode", "dark");
-    } else {
-        localStorage.setItem("dark-mode", "light");
-    }
-    changeDarkMode();
-});
+switchBtn.addEventListener("click", changeDarkMode);
