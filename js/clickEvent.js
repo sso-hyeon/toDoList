@@ -44,10 +44,10 @@ swithBtn.addEventListener("click", e => {
     darkMode = true;
     e.target.classList.toggle("off");
     if (e.target.matches(".off")) {
-        swithBg.style.background = "#999";
+        swithBg.style.background = "yellowgreen";
         localStorage.setItem("dark-mode", "dark");
     } else {
-        swithBg.style.background = "yellowgreen";
+        swithBg.style.background = "#999";
         localStorage.setItem("dark-mode", "light");
     }
     changeDarkMode();
