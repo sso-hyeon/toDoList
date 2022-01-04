@@ -192,11 +192,11 @@ div .switch {
     border-radius: 15px;
     width: 60px;
     height: 30px;
-    background-color: yellowgreen;
+    background-color: #999;
 }
 
 .switch.off {
-    background-color: #999;
+    background-color: yellowgreen;
 }
 
 .switch-btn {
@@ -214,7 +214,6 @@ div .switch {
 }
 
 .switch-btn.off {
-    /* align-self: flex-end; */
     transform: translateX(100%);
 }
 /* select-section-E */
