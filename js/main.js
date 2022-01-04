@@ -209,9 +209,9 @@ console.log("%c TO DO LIST", `color: white; font-size: 20px; font-family: 'Noto 
 // dark mode
 function changeDarkMode() {
     darkMode = true;
-    this.classList.toggle("off");
+    switchBtn.classList.toggle("off");
 
-    if (this.matches(".off")) {
+    if (switchBtn.matches(".off")) {
         localStorage.setItem("dark-mode", "dark");
     } else {
         localStorage.setItem("dark-mode", "light");
